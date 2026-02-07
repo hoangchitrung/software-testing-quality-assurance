@@ -1,0 +1,74 @@
+start	end	text
+0	6160	Hello, everyone. Today, I will have a presentation about the Playwright.
+6160	13000	I will have two members. There's my partner, Hijitong, and me, Minwong Hao.
+13000	16640	And here we go, the Playwright.
+16640	24240	And our team, the Playwright saw a software testing tool called Playwright.
+24240	29640	It's an automation testing tool developed by Microsoft.
+30080	39760	The Playwright not only supports the multiple platform-like windows and Linux,
+39760	51160	but also allows us to write tests in various languages, such as Python, Java, and JavaScript.
+51160	61360	And in this video, we're going to focus on the end-to-end testing process in our lineup environment.
+61360	75080	And the key features of the Playwright at ISS is getting used in any browser like Firefox 4, Microsoft Edge,
+75080	79280	Chrome, and Safari in the iOS environment.
+79280	86360	And the next is any platform like Windows, Linux, yes, and the others.
+86360	94320	This has the first key feature of Playwright. It has the first execution, like isolate contest.
+94320	97840	It's the new browser environment for each test.
+97840	104600	Millisecond startup, the ultra-fast initialization.
+104600	110120	The second is the resolution auto-waste. It has the smart interaction.
+110120	121040	What is the automatic list query for the elements to be visible, stable, and enabled before acting?
+121040	128080	No time-outs, eliminates need for manual time slips.
+128080	131440	And the final is the platform tooling.
+131440	134920	What is the key, the code change?
+134920	143200	What is the record user actions to generate test scripts in an inspector?
+143200	147840	We'll turn the button and selector explorations.
+147840	155160	Trace viewer, the comprehensive flexible for failure investigation.
+155160	160600	What is the name, snapshots, logs, and video?
+160600	170760	And about the setup, the Playwright will show the virtual Python environment.
+170760	180600	Install the Playwright in library, and next we're going to test the Playwright on source demo.com.
+180600	191960	About the script, you can type the install environment, method environment to install project isolation,
+191960	205240	and install via pip install Playwright, and enter the Playwright install to install the necessary browsers to run Playwright.
+205240	213560	Next, my partner, my teacher, will show you how Playwright gonna do in our demo.
+213560	224680	Okay, next is my part. In this testing, we will use the source demo website for the testing website.
+224680	235160	About the test case, we have three test cases. Happy case, which is login with standard user and proceed to order and complete the order without any error.
+235160	243640	And next is the negative case, login with a wrong user to testing the error.
+243640	253080	And the final one is the performant case with a testing the outer way of Playwright.
+253080	260280	Right here in my code editor, I did prepare the Python virtual environment.
+260280	271640	And I did install, I did install Playwright and Playwright install to use their web browser.
+271640	280440	Okay, first we will come to the Playwright codegen.
+280440	288840	When I enter the Playwright codegen and enter the website URL at the website source demo,
+288840	299960	they will show me two things. One thing is the website, the web browser. This web browser is actually from Playwright.
+299960	309640	They use their own web browser to testing because they can access to this element.
+309640	321960	And the second one is the Playwright inspector. This is the main character. It will generate the script from the interaction of this browser.
+321960	339560	I wish I will show you the example. I will proceed a standard case here. I will enter standard user and the password.
+339560	353880	I will order something. And then go to the cart. I will click checkout, enter some information.
+353880	375160	And here, as you can see, everything I do, every action I do, the Playwright inspector, they are recording it.
+375160	383880	And for this test, I will also use pytest. So I need to convert all of these things into pytest.
+383880	394680	So instead of rewriting this code into a function for pytest, Playwright inspector, they also support us for that.
+394680	402840	Right here, I use Python. So I want to do this. If you use another language, you can choose all the options.
+402840	413480	But right now, I'm going to go with pytest. As you can see, it will automatically convert into a test function for me.
+413480	436600	And I did the same to three cases. To run this function, I need to have the test text in front of the function name to playwright to the playtest.
+436600	445560	I need to recognize the function to run the testing. And here, I will run testing with pytest.
+445560	456440	So I will run this with slow motion 2000. This means every action, they will slow down two seconds.
+456440	465320	And tracing on, which will leave me a test resource after the testing for the trace viewer.
+465320	472280	I will run. This is the happy case.
+486440	512360	It is the negative case, as you can see,
+512360	526840	when pytest has done some testing function, it will automatically close the old one and open a new one for the new testing environment.
+526840	528840	Here is the performance test.
+556840	585880	Okay, that was the three test cases that I talked about before. And after I run the automation testing, it will generate for me the chasing for the case.
+585880	607880	Right here, I have three test cases. And I will use this for the playwright trace viewer to see what the automation will do.
+607880	625320	Okay, first, I will come with the happy case. When I use this, this comment, it will show me a black box for me to see the timeline of the testing, how long and the frame.
+625320	636760	And it will show everything, every action, interaction of playwright to the website.
+636760	652280	It will also show the delay time between these action. You can use it to check if the testing is something isn't right.
+652280	671160	And it's the same thing to the negative case.
+671160	681160	Right here, if the test case is wrong, it will stop and no more testing.
+681160	696840	And the final is for the performance test.
+696840	722840	Okay, at least, as you can see in the automation testing before, as you can see that at this step, the website is waiting like five seconds, which is actually on purpose because the website will have us delayed five seconds before we could enter the homepage,
+722840	736840	which that function of the website will help us to test the outer way of playwright. As you can see right here, the playwright actually wait about five seconds and then didn't do anything else.
+736840	752840	After five seconds, they see the chain of the website and they move and they just do the other like normal, like the happy case.
+752840	762840	Okay, and that's all for the demo. I will come back to the conclusion. This part will be for now.
+763840	771840	So, after all, so why we should use the playwright is that the manual testing.
+771840	778840	So the first is the playwright provides the higher speed and better flexibility.
+778840	792840	Automated test can be much faster and more consistently than manual testing, especially for repetitive and tuning scan areas.
+792840	807840	The second playwright offers a powerful and outer way mechanism. It is the automatically wait until the elements are ready before the performing actions.
+807840	827840	It's just as the licked button, this have eliminated the N4 manual delays like the time duct slip that you can see in the demo, which are often inefficient and error brought.
+827840	844840	The overall playwright helps improve testing based efficiencies and software quality by reducing human error and answering reliable testing as executions.
+844840	854840	And we hope these presentations have helped you understand the strength of the playwright in the modern software testing. Thank you.
