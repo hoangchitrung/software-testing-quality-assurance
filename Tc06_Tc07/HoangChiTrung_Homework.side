@@ -247,6 +247,138 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "bc289510-6421-4b22-96cb-5a07cdec1093",
+    "name": "TestCase-07-Cart Delete",
+    "commands": [{
+      "id": "a65db85d-f140-45da-b26f-21b2de8b2f2b",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5de2c48e-6b58-4451-9fea-1621266aef31",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8895c61-cfe3-4cba-aca5-15764bfa20af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-label",
+      "targets": [
+        ["css=.cart-label", "css:finder"],
+        ["xpath=//li[@id='topcartlink']/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77c317f2-29c2-4237-a8f5-593c25c0a1a9",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "3fe17f6d-3af9-4194-bccd-b60ac97d47b9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll(\"tbody tr\").length === 0",
+      "targets": [],
+      "value": "isCartEmpty"
+    }, {
+      "id": "fe05d92e-4435-4a6a-bc19-76dac9d8e2a4",
+      "comment": "",
+      "command": "if",
+      "target": "${isCartEmpty}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b190ba07-bba7-4dd4-b1f2-f48b47268122",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.no-data",
+      "targets": [
+        ["css=.no-data", "css:finder"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//section/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "Your Shopping Cart is empty!"
+    }, {
+      "id": "4314444a-b91e-4509-8440-c1f0963a75ce",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa47ae57-10a9-4906-a55b-4932a2ba0dc1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll(\"tbody tr\").length",
+      "targets": [],
+      "value": "cartLength"
+    }, {
+      "id": "43448055-4669-4bb9-ae17-24a7d38b5514",
+      "comment": "",
+      "command": "while",
+      "target": "${cartLength} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe827ce0-6a8e-40ff-9dc3-076accabf7a2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"table.cart tbody tr:first-child .product-name\").innerText",
+      "targets": [],
+      "value": "currentProductName"
+    }, {
+      "id": "1ba560f8-8deb-487a-b391-69c2c63602e2",
+      "comment": "",
+      "command": "echo",
+      "target": "${currentProductName}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5117b778-0071-4b89-b6fd-77846258b3d2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@class='remove-btn'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab171b79-cc74-49cb-ae04-a2e7e8bac77a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll(\"tbody tr\").length",
+      "targets": [],
+      "value": "cartLength"
+    }, {
+      "id": "e7b732c4-0a60-4ae2-9348-ba64d5335965",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d38607c-827d-4bcc-9a57-58c2b06c91f4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4e41dbc-79e2-4f4f-94eb-4f8115b6af3f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "d5ae053b-a950-40c2-a13b-357c298a2c3c",
