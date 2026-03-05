@@ -1,0 +1,868 @@
+{
+  "id": "a147419a-0d49-443c-8377-4a24a7e5cb26",
+  "version": "2.0",
+  "name": "demo1",
+  "url": "https://demo.nopcommerce.com/",
+  "tests": [{
+    "id": "a9f1a437-4195-4be6-b07a-f04f0e16f76d",
+    "name": "TestCase-01-Verify Account Registration Functionality",
+    "commands": [{
+      "id": "f707b620-4c46-48bd-a369-7599ba2002b8",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9f1b3cf-8271-4b06-b6f0-1f9e20bcbd7f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0daabe6-581f-4d40-a30e-52e0b75cabf4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Register",
+      "targets": [
+        ["linkText=Register", "linkText"],
+        ["css=.ico-register", "css:finder"],
+        ["xpath=//a[contains(text(),'Register')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register?returnUrl=%2F')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa25a25c-0fc2-44ab-a1b9-b50e3a8aeea3",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "f30bc8da-3849-4afd-be76-28992b948504",
+      "comment": "",
+      "command": "click",
+      "target": "id=gender-male",
+      "targets": [
+        ["id=gender-male", "id"],
+        ["name=Gender", "name"],
+        ["css=#gender-male", "css:finder"],
+        ["xpath=//input[@id='gender-male']", "xpath:attributes"],
+        ["xpath=//div[@id='gender']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74a7d6c2-0dfa-438a-ba2a-15e4b8cdef06",
+      "comment": "",
+      "command": "click",
+      "target": "id=FirstName",
+      "targets": [
+        ["id=FirstName", "id"],
+        ["name=FirstName", "name"],
+        ["css=#FirstName", "css:finder"],
+        ["xpath=//input[@id='FirstName']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "050f0b63-ac0a-4708-a457-a847427e8800",
+      "comment": "",
+      "command": "type",
+      "target": "id=FirstName",
+      "targets": [
+        ["id=FirstName", "id"],
+        ["name=FirstName", "name"],
+        ["css=#FirstName", "css:finder"],
+        ["xpath=//input[@id='FirstName']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "test05"
+    }, {
+      "id": "dd37723d-80fa-4487-9679-ee4dc1fe2812",
+      "comment": "",
+      "command": "click",
+      "target": "id=LastName",
+      "targets": [
+        ["id=LastName", "id"],
+        ["name=LastName", "name"],
+        ["css=#LastName", "css:finder"],
+        ["xpath=//input[@id='LastName']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2649025d-5dbf-4988-a317-04589c5c9697",
+      "comment": "",
+      "command": "type",
+      "target": "id=LastName",
+      "targets": [
+        ["id=LastName", "id"],
+        ["name=LastName", "name"],
+        ["css=#LastName", "css:finder"],
+        ["xpath=//input[@id='LastName']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "test05"
+    }, {
+      "id": "506dc78c-0d13-4785-b2fa-e80154dcb1b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b20217b4-2503-476e-9de6-6bb506294f9a",
+      "comment": "",
+      "command": "type",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "tester51@gmail.com"
+    }, {
+      "id": "3717d96b-db27-4c48-a02e-0afb6d000b48",
+      "comment": "",
+      "command": "click",
+      "target": "id=Company",
+      "targets": [
+        ["id=Company", "id"],
+        ["name=Company", "name"],
+        ["css=#Company", "css:finder"],
+        ["xpath=//input[@id='Company']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "689ba181-c6e2-44af-9742-617cc6f861d1",
+      "comment": "",
+      "command": "type",
+      "target": "id=Company",
+      "targets": [
+        ["id=Company", "id"],
+        ["name=Company", "name"],
+        ["css=#Company", "css:finder"],
+        ["xpath=//input[@id='Company']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "Software"
+    }, {
+      "id": "cad0e418-0d44-479e-a4dd-46438c0b5421",
+      "comment": "",
+      "command": "click",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4217cd6a-4972-4b9c-b36f-34459490209f",
+      "comment": "",
+      "command": "type",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "80dbb865-26be-474d-8220-1a2659dc1508",
+      "comment": "",
+      "command": "click",
+      "target": "id=ConfirmPassword",
+      "targets": [
+        ["id=ConfirmPassword", "id"],
+        ["name=ConfirmPassword", "name"],
+        ["css=#ConfirmPassword", "css:finder"],
+        ["xpath=//input[@id='ConfirmPassword']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[4]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "274d8c0b-0beb-4ca8-8128-500f0cfc9747",
+      "comment": "",
+      "command": "type",
+      "target": "id=ConfirmPassword",
+      "targets": [
+        ["id=ConfirmPassword", "id"],
+        ["name=ConfirmPassword", "name"],
+        ["css=#ConfirmPassword", "css:finder"],
+        ["xpath=//input[@id='ConfirmPassword']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[4]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "4a6e2ede-7467-4ff0-a2eb-7fcddaf1d067",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-button",
+      "targets": [
+        ["id=register-button", "id"],
+        ["name=register-button", "name"],
+        ["css=#register-button", "css:finder"],
+        ["xpath=//button[@id='register-button']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/form/section[5]/button", "xpath:idRelative"],
+        ["xpath=//section[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d725bd31-6a26-4212-a0d6-409b40b02f86",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.result",
+      "targets": [
+        ["css=.result", "css:finder"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//section/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Your registration completed"
+    }]
+  }, {
+    "id": "fa41cdb5-06c5-453b-b485-c4917934726a",
+    "name": "TestCase-02-Verify Login",
+    "commands": [{
+      "id": "59700366-05d6-451d-bc79-1452c4672493",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "319c6082-f729-4188-a940-fc78a81e99b2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26f3596c-1916-437e-9639-0b216c214405",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log in",
+      "targets": [
+        ["linkText=Log in", "linkText"],
+        ["css=.ico-login", "css:finder"],
+        ["xpath=//a[contains(text(),'Log in')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login?returnUrl=%2F')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60521696-9733-4e3e-9e5d-09e6d17cc0b4",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "6c1319bf-2b9e-4d2e-8002-859c16600b42",
+      "comment": "",
+      "command": "click",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div/div[2]/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd3d091f-4f29-474b-bde0-7401b85a8fe1",
+      "comment": "",
+      "command": "type",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div/div[2]/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "tester51@gmail.com"
+    }, {
+      "id": "ccdc45cd-fc65-4ffb-a6f9-5c878f34d173",
+      "comment": "",
+      "command": "click",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8ca9e72-4d92-47c4-b0b5-6ec384e6bfdf",
+      "comment": "",
+      "command": "type",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "17c7a61b-6930-4a02-9983-87828e09d1dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-button",
+      "targets": [
+        ["css=.login-button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div/div[2]/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//form/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84ebcbd7-3fb3-4bb6-ab20-ef17b8c36915",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Log out",
+      "targets": [
+        ["linkText=Log out", "linkText"],
+        ["css=.ico-logout", "css:finder"],
+        ["xpath=//a[contains(text(),'Log out')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d800abb5-97e9-4d03-a85d-5bbb1f98721b",
+    "name": "TestCase-03-Logout",
+    "commands": [{
+      "id": "8fbbec9f-47de-4c09-8eba-9a9b5c764fcf",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "916a8b77-e60d-40f1-973d-03780da9a473",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48e0e10f-4c08-43d1-9046-4394f2fb42a4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log out",
+      "targets": [
+        ["linkText=Log out", "linkText"],
+        ["css=.ico-logout", "css:finder"],
+        ["xpath=//a[contains(text(),'Log out')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c9b621c-9c65-4f5e-a0ea-0ebb04af798a",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "linkText=Log out",
+      "targets": [
+        ["linkText=Log out", "linkText"],
+        ["css=.ico-logout", "css:finder"],
+        ["xpath=//a[contains(text(),'Log out')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3196636d-f937-4263-8d5b-e4dd16e97328",
+    "name": "TestCase-04-SearchProduct",
+    "commands": [{
+      "id": "b1b11f42-f100-491c-8e54-2712c9c5ebb6",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77ef48d0-819f-4695-8cc1-3926f5c48c40",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "828cf3c4-a7ab-4bdd-aa07-5b83b1438c83",
+      "comment": "",
+      "command": "click",
+      "target": "id=small-searchterms",
+      "targets": [
+        ["id=small-searchterms", "id"],
+        ["name=q", "name"],
+        ["css=#small-searchterms", "css:finder"],
+        ["xpath=//input[@id='small-searchterms']", "xpath:attributes"],
+        ["xpath=//form[@id='small-search-box-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1475f68-42b2-4e62-a531-1a0f1cd3ea10",
+      "comment": "",
+      "command": "type",
+      "target": "id=small-searchterms",
+      "targets": [
+        ["id=small-searchterms", "id"],
+        ["name=q", "name"],
+        ["css=#small-searchterms", "css:finder"],
+        ["xpath=//input[@id='small-searchterms']", "xpath:attributes"],
+        ["xpath=//form[@id='small-search-box-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "Apple"
+    }, {
+      "id": "d3f50488-dce2-4a04-8ded-05f1e27340ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-box-button",
+      "targets": [
+        ["css=.search-box-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='small-search-box-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67a902d8-9553-450f-b7ca-fecdf321bc51",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Apple",
+      "targets": [
+        ["linkText=Apple MacBook Pro", "linkText"],
+        ["css=.item-box:nth-child(1) .details a", "css:finder"],
+        ["xpath=//a[contains(text(),'Apple MacBook Pro')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[3]/div/div[2]/div/div/div/article/div[2]/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/apple-macbook-pro')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Apple MacBook Pro')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bb7ad0d2-b9b7-4a85-861b-e8e5ab3ce634",
+    "name": "TestCase-05-Product Quantity Added To Shopping Cart",
+    "commands": [{
+      "id": "9e97ac2d-b9f1-434f-b113-c01ac923632c",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56c2f76f-20db-4bf2-9755-93d9782c2c15",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40592c0d-df3e-429b-9afd-bfacbfad1860",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Electronics",
+      "targets": [
+        ["linkText=Electronics", "linkText"],
+        ["css=.menu__item:nth-child(2) > .menu__item-toggle > .menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Electronics')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/electronics')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Electronics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90d45eb5-5fb3-4271-b6a3-6ce2c366bc98",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "33901bfc-8451-4bbf-9e03-7e21ef0f9f43",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cell phones",
+      "targets": [
+        ["linkText=Cell phones", "linkText"],
+        ["css=.menu__item:nth-child(2) .menu__item:nth-child(2) > .menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Cell phones')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cell-phones')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cell phones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82bb4ba8-bf16-4669-a17a-669523e54c03",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "c4b4ec4e-da13-4ad7-929e-58096958dd27",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='button']",
+      "targets": [
+        ["css=.item-box:nth-child(1) .product-box-add-to-cart-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[2]/div[2]/div/div/div/article/div[2]/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05bef47a-9122-48dc-b91a-61700953a576",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'The product has been added to your shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9adbd492-86bb-4a0e-8c8e-164eef703016",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "920ae91f-8c06-4442-8466-7e698815b574",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item-box:nth-child(2) .product-box-add-to-cart-button",
+      "targets": [
+        ["css=.item-box:nth-child(2) .product-box-add-to-cart-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[2]/div[2]/div/div/div[2]/article/div[2]/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/article/div[2]/div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3adab052-efb4-4443-90f1-b87e25e0dd50",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.bar-notification",
+      "targets": [
+        ["css=.bar-notification", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e17333e-7a5e-4404-8d30-8ff18ce6edf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item-box:nth-child(3) .product-box-add-to-cart-button",
+      "targets": [
+        ["css=.item-box:nth-child(3) .product-box-add-to-cart-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[2]/div[2]/div/div/div[3]/article/div[2]/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/article/div[2]/div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfdf571c-f796-4449-9be5-468a7043b35a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'The product has been added to your shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "180d004e-e650-4071-a05a-5ab172b753e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item-box:nth-child(4) .product-box-add-to-cart-button",
+      "targets": [
+        ["css=.item-box:nth-child(4) .product-box-add-to-cart-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[2]/div[2]/div/div/div[4]/article/div[2]/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/article/div[2]/div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0bc6cc8-3c6e-4871-99c2-0ba07630d11b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'The product has been added to your shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4e8552e-ff0c-4269-b164-0b651bcf23d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item-box:nth-child(5) .product-box-add-to-cart-button",
+      "targets": [
+        ["css=.item-box:nth-child(5) .product-box-add-to-cart-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[2]/div[2]/div/div/div[5]/article/div[2]/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/article/div[2]/div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1715b0c0-bbb2-4f17-a5e3-c9e7cf7e92aa",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'The product has been added to your shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00e33c5d-eb3b-478a-acc0-a8ad93dd18aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//div[@id='bar-notification']/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdc6e258-8462-40e8-88c7-87ccc3db6e50",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-qty",
+      "targets": [
+        ["css=.cart-label", "css:finder"],
+        ["xpath=//li[@id='topcartlink']/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping cart')]", "xpath:innerText"]
+      ],
+      "value": "(5)"
+    }]
+  }, {
+    "id": "933073c8-a7b4-424c-9c55-4e2c235eb95d",
+    "name": "TC04-0.15 points",
+    "commands": [{
+      "id": "c582da35-bef3-4896-bc48-5b2cea852175",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a7cb967-c1c7-493f-b23f-04887f780973",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "282e4e00-6c10-476b-8217-cb31aa78bf2f",
+      "comment": "",
+      "command": "click",
+      "target": "id=small-searchterms",
+      "targets": [
+        ["id=small-searchterms", "id"],
+        ["name=q", "name"],
+        ["css=#small-searchterms", "css:finder"],
+        ["xpath=//input[@id='small-searchterms']", "xpath:attributes"],
+        ["xpath=//form[@id='small-search-box-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "880c3d32-8d4d-4d58-bf85-94eaba56fc44",
+      "comment": "",
+      "command": "type",
+      "target": "id=small-searchterms",
+      "targets": [
+        ["id=small-searchterms", "id"],
+        ["name=q", "name"],
+        ["css=#small-searchterms", "css:finder"],
+        ["xpath=//input[@id='small-searchterms']", "xpath:attributes"],
+        ["xpath=//form[@id='small-search-box-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "Apple"
+    }, {
+      "id": "8ad8cad1-ab8a-4e56-8416-e75bfec9f8df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-box-button",
+      "targets": [
+        ["css=.search-box-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='small-search-box-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3a14f3f-dc97-481b-889a-bfee80044b59",
+      "comment": "",
+      "command": "storeText",
+      "target": "linkText=Apple MacBook Pro",
+      "targets": [
+        ["linkText=Apple MacBook Pro", "linkText"],
+        ["css=.item-box:nth-child(1) .details a", "css:finder"],
+        ["xpath=//a[contains(text(),'Apple MacBook Pro')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[3]/div/div[2]/div/div/div/article/div[2]/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/apple-macbook-pro')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Apple MacBook Pro')]", "xpath:innerText"]
+      ],
+      "value": "item1"
+    }, {
+      "id": "933f26d2-6791-4f50-bcc2-c1601d840001",
+      "comment": "",
+      "command": "storeText",
+      "target": "linkText=Apple iCam",
+      "targets": [
+        ["linkText=Apple iCam", "linkText"],
+        ["css=.item-box:nth-child(2) .details a", "css:finder"],
+        ["xpath=//a[contains(text(),'Apple iCam')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[3]/div/div[2]/div/div/div[2]/article/div[2]/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/apple-icam')])[2]", "xpath:href"],
+        ["xpath=//div[2]/article/div[2]/h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Apple iCam')]", "xpath:innerText"]
+      ],
+      "value": "item2"
+    }, {
+      "id": "3f2fba8f-cea1-4e24-a01f-a77a5c0944e9",
+      "comment": "",
+      "command": "storeText",
+      "target": "linkText=Apple iPhone 16 128GB",
+      "targets": [
+        ["linkText=Apple iPhone 16 128GB", "linkText"],
+        ["css=.item-box:nth-child(3) .details a", "css:finder"],
+        ["xpath=//a[contains(text(),'Apple iPhone 16 128GB')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/section/div/div[2]/div[3]/div/div[2]/div/div/div[3]/article/div[2]/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/apple-iphone-16-128gb')])[2]", "xpath:href"],
+        ["xpath=//div[3]/article/div[2]/h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Apple iPhone 16 128GB')]", "xpath:innerText"]
+      ],
+      "value": "item3"
+    }, {
+      "id": "2aad013c-be11-4d83-8308-ff372e0a737f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${item1}.includes(\"Apple\")",
+      "targets": [],
+      "value": "check1"
+    }, {
+      "id": "0a9347ad-68c5-4fbd-b478-cd2a09d0f4be",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${item2}.includes(\"Apple\")",
+      "targets": [],
+      "value": "check2"
+    }, {
+      "id": "2f22f593-9023-4af4-a324-a4d50d7952c9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${item3}.includes(\"Apple\")",
+      "targets": [],
+      "value": "check3"
+    }, {
+      "id": "5155b6e4-1c35-4947-901f-7b4bd845e251",
+      "comment": "",
+      "command": "verify",
+      "target": "check1",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "fbf1d7a3-6000-4154-85ce-d0cfcb3f8455",
+      "comment": "",
+      "command": "verify",
+      "target": "check2",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "78cd1a32-59e9-4a82-85cc-c1233ad7dde6",
+      "comment": "",
+      "command": "verify",
+      "target": "check3",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "e7e139b2-5ccb-4e0a-b97e-828f97a2472e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3c293627-070f-4ca0-a99a-5281209cbe4b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a9f1a437-4195-4be6-b07a-f04f0e16f76d"]
+  }],
+  "urls": ["https://demo.nopcommerce.com/"],
+  "plugins": []
+}

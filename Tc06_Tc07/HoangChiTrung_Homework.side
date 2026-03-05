@@ -1,0 +1,261 @@
+{
+  "id": "ba972cf3-572d-4106-b73c-c39fa7f05d59",
+  "version": "2.0",
+  "name": "HoangChiTrung_Homework",
+  "url": "https://demo.nopcommerce.com/",
+  "tests": [{
+    "id": "b650f4a5-6340-4938-a080-3a6e683cf635",
+    "name": "TestCase-06-Verify Total Payment",
+    "commands": [{
+      "id": "717c2582-b93d-4df0-bf75-fce677b05112",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.nopcommerce.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fcb583c-429a-4875-ac1f-3081207dbb3b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb5960da-a2b3-4106-a763-42151f1ba2fb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Electronics",
+      "targets": [
+        ["linkText=Electronics", "linkText"],
+        ["css=.menu__item:nth-child(2) > .menu__item-toggle > .menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Electronics')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/electronics')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Electronics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aecfb6fa-a19e-45c0-a237-6d9b1c6b35a6",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "472f3d0d-96b2-4148-990c-10e0cf9483b5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cell phones",
+      "targets": [
+        ["linkText=Cell phones", "linkText"],
+        ["css=.sublist > .inactive:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Cell phones')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/aside/section/div/ul/li[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/cell-phones')])[2]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf8fbcad-c0a3-41b1-bbc6-c137a8e32996",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "27cdce5f-0ba2-4bdb-bc79-82eff1013afa",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=(//div[@class='item-box'])",
+      "targets": [],
+      "value": "totalProduct"
+    }, {
+      "id": "b319a637-a859-4f89-ab87-4cc30bd22059",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalProduct}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebce8df6-95f8-4005-a540-534b3fef1b5c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "aa847405-497b-4a73-959f-01c8d60eba64",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalProduct}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bdfa8a6-8c1a-4aab-a4be-9d21d1228061",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@class='item-box'])[${i}]//button[contains(@class,'product-box-add-to-cart-button')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce92cd79-3001-4567-b520-b1afd69eb42f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i}+ 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "dd3020ae-8a45-4b9b-87c3-5be38cadfa90",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1c4df0d-e193-43d9-aae4-a34e688625f7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "3b6bb116-2503-4220-b8a0-d687616129a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-label",
+      "targets": [
+        ["css=.cart-label", "css:finder"],
+        ["xpath=//li[@id='topcartlink']/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd0ee0d1-0e13-4ea0-97d1-c7eab72a13c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "accmulatedTotal"
+    }, {
+      "id": "57b38e4f-c9cb-4b5c-8d23-a437bcc4a0b2",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalProduct}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d54b9d74-e95f-49d8-a3cc-c4d0382fada2",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//span[@class='product-subtotal'])[${i}]",
+      "targets": [],
+      "value": "currentPrice"
+    }, {
+      "id": "fcbd5111-2614-4449-b991-eeb0a8f7bae4",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "76d5b7a9-9ff5-46e5-89f5-0da801b7b614",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var xpath = \"(//span[@class='product-subtotal'])[\" + ${i} + \"]\"; var element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var text = element ? element.innerText : \"0\"; var price = parseFloat(text.replace(/[$,]/g, \"\")); return (Number(${accmulatedTotal}) || 0) + price;",
+      "targets": [],
+      "value": "accmulatedTotal"
+    }, {
+      "id": "474d4627-c0a5-46ae-b9ac-6512b8512cac",
+      "comment": "",
+      "command": "echo",
+      "target": "Buoc ${i} - Gia: ${currentPrice} - Tong tam tinh: ${accmulatedTotal}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f6042a5-2e81-428e-9f61-9c394cf77873",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${i}) + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "eae3feda-3219-4df5-851c-88a374ce483a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "211b1389-6a9b-4b02-87da-209ec7f20079",
+      "comment": "",
+      "command": "echo",
+      "target": "Total: ${accmulatedTotal}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a40fb933-aae4-49a8-bcc4-95462841caa4",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//tr[@class='order-total']//td[@class='cart-total-right']//strong",
+      "targets": [
+        ["css=.value-summary > strong", "css:finder"],
+        ["xpath=//form[@id='shopping-cart-form']/div[3]/div[2]/div/table/tbody/tr[4]/td[2]/span/strong", "xpath:idRelative"],
+        ["xpath=//span/strong", "xpath:position"]
+      ],
+      "value": "onWebTotalRaw"
+    }, {
+      "id": "dbcb471d-6b5c-44e9-aba0-73603b8e8e13",
+      "comment": "",
+      "command": "echo",
+      "target": "${onWebTotalRaw}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ee9dbb0-18a6-452a-9725-12c32d2bccd3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseFloat(document.querySelector(\".order-total .value-summary strong\").innerText.replace(/[^0-9.]/g, \"\"))",
+      "targets": [],
+      "value": "onWebTotalClean"
+    }, {
+      "id": "701cb9ff-2094-4840-9e6b-32bc3797fc56",
+      "comment": "",
+      "command": "echo",
+      "target": "Result after replace: ${onWebTotalClean}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c52a8069-104c-499f-95cb-611da9d69362",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${accmulatedTotal}) === Number(${onWebTotalClean})",
+      "targets": [],
+      "value": "isMatch"
+    }, {
+      "id": "b578b610-656f-4855-9d5b-104c2e8b6242",
+      "comment": "",
+      "command": "verify",
+      "target": "isMatch",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "ed0c2633-0b73-412e-9031-2624fdc994b4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d5ae053b-a950-40c2-a13b-357c298a2c3c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b650f4a5-6340-4938-a080-3a6e683cf635"]
+  }],
+  "urls": ["https://demo.nopcommerce.com/"],
+  "plugins": []
+}
