@@ -1,0 +1,810 @@
+{
+  "id": "4e541fdc-0901-480d-8b92-68e037b608cc",
+  "version": "2.0",
+  "name": "anphat-TC",
+  "url": "https://www.anphatpc.com.vn/",
+  "tests": [{
+    "id": "f783d575-c4b4-4ad4-8197-ccee707db49e",
+    "name": "tc01-register",
+    "commands": [{
+      "id": "a4bbf3c9-3250-44ca-9e32-f289d6f36145",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac83b03a-e094-43a1-aa14-74c93a808840",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a572d339-0f5e-42db-95a5-213d2c5f386a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Đăng ký",
+      "targets": [
+        ["linkText=Đăng ký", "linkText"],
+        ["css=.text-12 > .d-block:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng ký')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/dang-ky')]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Đăng ký')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df13ada9-5f9f-4c6c-91c9-59bc66657d14",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=info[email]", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td/table/tbody/tr/td[2]/input", "xpath:position"]
+      ],
+      "value": "haokun5500@gmail.com"
+    }, {
+      "id": "a732a90a-8709-47d8-a82d-7eaaa48cc945",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=info[password]", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "hao123456"
+    }, {
+      "id": "a1f7e5e9-e816-4e86-aa7e-9c0fe991ccfd",
+      "comment": "",
+      "command": "type",
+      "target": "id=password1",
+      "targets": [
+        ["id=password1", "id"],
+        ["name=password1", "name"],
+        ["css=#password1", "css:finder"],
+        ["xpath=//input[@id='password1']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td/table/tbody/tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "hao123456"
+    }, {
+      "id": "02eb3489-0ff3-4092-977a-dc10743cd874",
+      "comment": "",
+      "command": "type",
+      "target": "id=full_name",
+      "targets": [
+        ["id=full_name", "id"],
+        ["name=info[name]", "name"],
+        ["css=#full_name", "css:finder"],
+        ["xpath=//input[@id='full_name']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Vũ Anh Hào"
+    }, {
+      "id": "71b54763-e0af-4342-8538-de64deea26e4",
+      "comment": "",
+      "command": "click",
+      "target": "name=info[province]",
+      "targets": [
+        ["name=info[province]", "name"],
+        ["css=td > select", "css:finder"],
+        ["xpath=//select[@name='info[province]']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[6]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5e93eed-f985-4c5b-8b23-3661f384a6ca",
+      "comment": "",
+      "command": "select",
+      "target": "name=info[province]",
+      "targets": [],
+      "value": "label=TP HCM"
+    }, {
+      "id": "7714d826-f105-4ddc-9dfb-5a096a26d624",
+      "comment": "",
+      "command": "type",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["name=info[address]", "name"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": "TP HCM"
+    }, {
+      "id": "c0f66e44-9144-4042-8282-d85eef85482f",
+      "comment": "",
+      "command": "type",
+      "target": "id=mobile",
+      "targets": [
+        ["id=mobile", "id"],
+        ["name=info[mobile]", "name"],
+        ["css=#mobile", "css:finder"],
+        ["xpath=//input[@id='mobile']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[8]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "0123456789"
+    }, {
+      "id": "aaef2ab9-4685-4633-8c17-41538d1771eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_red",
+      "targets": [
+        ["css=.btn_red", "css:finder"],
+        ["xpath=//input[@value='Đăng ký']", "xpath:attributes"],
+        ["xpath=//table[@id='tb_register']/tbody/tr[10]/td[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[10]/td[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fd18067-e635-47ca-ad73-2447a783d395",
+      "comment": "",
+      "command": "click",
+      "target": "css=h3:nth-child(3)",
+      "targets": [
+        ["css=h3:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='content']/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Đăng ký thành công')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f79b72d5-e10d-47f5-9e7b-8081a9e335c3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3:nth-child(3)",
+      "targets": [
+        ["css=h3:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='content']/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Đăng ký thành công')]", "xpath:innerText"]
+      ],
+      "value": "Đăng ký thành công"
+    }, {
+      "id": "4bea94bd-f4bb-4e6b-ada5-1196c1c8d144",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a030ca11-8935-428f-bbf8-9fa0230cfb52",
+    "name": "tc02-login",
+    "commands": [{
+      "id": "77679f30-e2b8-4911-8021-1eeaf8c46106",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50b5a00d-0ea8-407c-a20c-a07a5442b396",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "605f0a5b-3a89-4278-8493-68f42ff7f9f5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Đăng nhập",
+      "targets": [
+        ["linkText=Đăng nhập", "linkText"],
+        ["css=.text-12 > .d-block:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng nhập')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/dang-nhap')]", "xpath:href"],
+        ["xpath=//div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Đăng nhập')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "99c3f542-0853-4bc3-9d0c-1682fdd20299",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//td[@id='login_col']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td/table/tbody/tr/td[2]/input", "xpath:position"]
+      ],
+      "value": "haokun5500@gmail.com"
+    }, {
+      "id": "17546964-f2f8-46c1-b2f5-72f074812ce8",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//td[@id='login_col']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "hao123456"
+    }, {
+      "id": "a006477b-d51c-4f09-863b-78fe23f5c0ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_red",
+      "targets": [
+        ["css=.btn_red", "css:finder"],
+        ["xpath=//input[@value='Đăng nhập']", "xpath:attributes"],
+        ["xpath=//td[@id='login_col']/table/tbody/tr[3]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fffcb50b-7f5c-4526-b3b4-89965a678fb4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-icon-right",
+      "targets": [
+        ["css=.header-icon-right", "css:finder"],
+        ["xpath=//div[3]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9061000f-f2a1-404b-bf03-d5a75bd11d40",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "linkText=Đăng nhập",
+      "targets": [
+        ["linkText=Đăng nhập", "linkText"],
+        ["css=.text-12 > .d-block:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng nhập')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/dang-nhap')]", "xpath:href"],
+        ["xpath=//div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Đăng nhập')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09e5fc70-6766-47e8-9e45-a4877e134226",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "076e367c-21a5-4b56-9f34-2759e689db6a",
+    "name": "tc03-logout",
+    "commands": [{
+      "id": "80f6861d-4aa2-4067-8e44-a613b0f30a04",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b878bcd-ae2a-4d64-b2c3-05fc0661f2cc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b014557-3a74-4c85-8750-3fbf750c9d1c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Vũ Anh Hào",
+      "targets": [
+        ["linkText=Vũ Anh Hào", "linkText"],
+        ["css=.mt-2", "css:finder"],
+        ["xpath=//a[contains(text(),'Vũ Anh Hào')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/taikhoan')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Vũ Anh Hào')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "327ff68f-0718-47d7-910a-a78ffd5534fd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log-out",
+      "targets": [
+        ["linkText=Log-out", "linkText"],
+        ["css=#account-left > div > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log-out')]", "xpath:link"],
+        ["xpath=//td[@id='account-left']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout.php')]", "xpath:href"],
+        ["xpath=//td/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log-out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfaec8e0-84b8-4113-9b02-e82217ea5394",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Đăng nhập",
+      "targets": [
+        ["linkText=Đăng nhập", "linkText"],
+        ["css=.text-12 > .d-block:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng nhập')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/dang-nhap')]", "xpath:href"],
+        ["xpath=//div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Đăng nhập')]", "xpath:innerText"]
+      ],
+      "value": "Đăng nhập"
+    }, {
+      "id": "4875e908-5e19-47fc-8ba0-dfc7de906038",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1dd9164e-309d-4ba1-b016-28d2b13b7225",
+    "name": "tc04-Verify Search Functionality",
+    "commands": [{
+      "id": "0dbb972f-d98c-4626-b215-8a6d049bbb26",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a015bfec-c33a-4072-b259-847e5ad4fd49",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "084fda3a-f30f-4906-b613-3bf560543fe6",
+      "comment": "",
+      "command": "click",
+      "target": "id=js-search",
+      "targets": [
+        ["id=js-search", "id"],
+        ["name=q", "name"],
+        ["css=#js-search", "css:finder"],
+        ["xpath=//input[@id='js-search']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c403be2a-3f62-42b8-bb4d-6eef4e39f6d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=js-search",
+      "targets": [
+        ["id=js-search", "id"],
+        ["name=q", "name"],
+        ["css=#js-search", "css:finder"],
+        ["xpath=//input[@id='js-search']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "rtx 4060"
+    }, {
+      "id": "146149ff-a113-4478-ac1c-6ed1278f526a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.submit-search",
+      "targets": [
+        ["css=.submit-search", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Tìm kiếm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2e9fa27-6904-4bd7-84ef-93c172bb5f8d",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60b8aba9-1b5e-4047-842c-71076a425ed2",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=(//div[contains(@class,'p-item')])",
+      "targets": [],
+      "value": "totalProduct"
+    }, {
+      "id": "515ef051-e9da-4f32-979b-1fe084b6f0a9",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalProduct}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16c4f91d-439e-41af-98db-ad6985a6205c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "cad36108-24ca-4048-9497-5c2a6044a71b",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalProduct} && ${i} <= 5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73c5cede-4465-4f7b-8ab1-4e858ce2a13b",
+      "comment": "",
+      "command": "echo",
+      "target": "${i}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "107e16c1-d01c-4e21-9b61-ac5b090b7d1d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[contains(@class,'p-item')]//a[@class='p-img'])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b05af3a1-a9b5-4a8c-9ae5-a3c1d28d1e19",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\".item-content\").innerText.trim().length > 0",
+      "targets": [],
+      "value": "hasSpecs"
+    }, {
+      "id": "bc9e0aee-05e3-4991-a355-50f797b097af",
+      "comment": "",
+      "command": "echo",
+      "target": "${hasSpecs}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3de109c2-38fa-47a1-9f43-52bb0ad2edf3",
+      "comment": "",
+      "command": "if",
+      "target": "${hasSpecs} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c9affda-7159-4cbc-b3ca-e77aa2c02e3b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\".item-content\").innerText.toUpperCase().includes(\"RTX\") && document.querySelector(\".item-content\").innerText.toUpperCase().includes(\"4060\")",
+      "targets": [],
+      "value": "isCorrect"
+    }, {
+      "id": "f5e01254-be5f-419f-b9ca-b1726aad69af",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d95646f-63f8-4eb5-82ed-0f094f5ae40f",
+      "comment": "",
+      "command": "verify",
+      "target": "isCorrect",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "f792a9f0-4291-45bc-866c-803ee11a9232",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "079b8603-bb70-4088-b4ba-c610b71cddcd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"h1\").innerText.toUpperCase().includes(\"RTX\") && document.querySelector(\"h1\").innerText.toUpperCase().includes(\"4060\")",
+      "targets": [],
+      "value": "isCorrect"
+    }, {
+      "id": "802303d1-2241-483e-aacf-4d49a71304af",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3032626-cd14-4bca-b260-4599cad1ae8f",
+      "comment": "",
+      "command": "verify",
+      "target": "isCorrect",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "63cab62c-c183-4a60-88f5-9152efcddf49",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "513853b3-275a-4f55-a22c-a9ae2a300c7a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "812256d0-88b3-4f79-8634-4364b8815c6c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c40ac2b3-c272-43c9-8747-8003d42a105c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3ae59dbf-5a2b-47be-a849-0b1ca0b3a9c4",
+    "name": "tc05-Verify Filter by RAM Attribute",
+    "commands": [{
+      "id": "b92b6cef-98df-4418-afa9-cb8635109e06",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab0dbc94-74df-4a05-b511-4d2fca12c007",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59083111-ce2a-4e67-a6ab-c9be3c86338c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc2a8e13-173d-4c93-9609-0cbcf796d216",
+      "comment": "",
+      "command": "echo",
+      "target": "xpath=//div[contains(@class,'p-item')]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "e4a1dc7b-40de-493d-9e8f-e0c1ef5d1767",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class,'js-p-item')]",
+      "targets": [],
+      "value": "productCount"
+    }, {
+      "id": "a605fb8c-bf51-45d5-9d00-17c697564848",
+      "comment": "",
+      "command": "echo",
+      "target": "${productCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94c4a785-e480-4e9c-9f8a-5bcdb49217dd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "ae911553-61c4-4abd-89c0-845dafa512a5",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${productCount} && ${i} <= 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb09bca3-3467-4c08-9812-97bc7e6fcf1f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(@class,'p-add-btn')])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a9d34b6-ff8e-40ef-9900-6b2f904d7697",
+      "comment": "",
+      "command": "echo",
+      "target": "${i}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a075a65d-85fc-44b7-b0e3-85ae6a0058f5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} +1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "78a885ef-ef9a-4088-8f9f-5fcc36a338d1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd7e44eb-6733-48d3-9f2f-6ce0d30ad87d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-cart",
+      "targets": [
+        ["css=.icon-cart", "css:finder"],
+        ["xpath=//div[4]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2658d5e9-0be0-4649-a1d3-ecbe63e84738",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "j"
+    }, {
+      "id": "ed2ab491-edfd-47a3-8af8-675a984dc1b3",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tr[contains(@class,'js-item-row')]",
+      "targets": [],
+      "value": "cartItem"
+    }, {
+      "id": "b6051dcd-8582-4c9c-ae34-e56164393fee",
+      "comment": "",
+      "command": "echo",
+      "target": "${cartItem}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48c0c380-e46b-4054-a486-4bd2a0805da0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "sum"
+    }, {
+      "id": "99b8fecb-aeb9-46b0-aa1a-99f780b1da3d",
+      "comment": "",
+      "command": "while",
+      "target": "${j} <= ${cartItem}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b65bc0b6-0058-47aa-9e86-11da9ba65dc3",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//tr[contains(@class,'js-item-row')])[${j}]//b[@class='red']/span",
+      "targets": [
+        ["css=.js-item-row:nth-child(1) .total-item-price", "css:finder"],
+        ["xpath=//table[@id='tbl_list_cart']/tbody/tr/td[3]/b/span", "xpath:idRelative"],
+        ["xpath=//td[3]/b/span", "xpath:position"]
+      ],
+      "value": "price"
+    }, {
+      "id": "de6931de-75f1-4063-bd6e-56dfb39ea5cc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return String(${price}).replace(/\\./g,'')",
+      "targets": [],
+      "value": "priceNumber"
+    }, {
+      "id": "167fe439-ccfb-4d7d-ab94-549aa5df807f",
+      "comment": "",
+      "command": "echo",
+      "target": "${priceNumber}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d9872c5-1d40-46f1-b999-a04f8c99face",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${sum}) + Number(${priceNumber})",
+      "targets": [],
+      "value": "sum"
+    }, {
+      "id": "341451cf-252b-401b-8d50-b7ae9cc3667c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${j} +1",
+      "targets": [],
+      "value": "j"
+    }, {
+      "id": "e3cb6acd-38bb-4199-8d8c-eba78585d09e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4b98752-bcde-487a-8db2-6439276515f9",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//span[@id='total_value']",
+      "targets": [],
+      "value": "totalPrice"
+    }, {
+      "id": "9f961786-c6cf-4884-896b-7c7a03e179bf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return String(${totalPrice}).replace(/\\./g,'')",
+      "targets": [],
+      "value": "priceClean"
+    }, {
+      "id": "dc95691f-d614-4bc4-9ca0-84faf82a57b2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${sum}) === Number(${priceClean})",
+      "targets": [],
+      "value": "isCorrect"
+    }, {
+      "id": "5ac53104-761b-4dc0-945b-2a2321f4a048",
+      "comment": "",
+      "command": "echo",
+      "target": "${priceClean}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "205e2cd1-fb32-4a1e-bd3a-68983ecad666",
+      "comment": "",
+      "command": "echo",
+      "target": "${sum}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3ebec88-879d-441c-bd16-b10eeb0454a5",
+      "comment": "",
+      "command": "echo",
+      "target": "${isCorrect}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3e18d3f-b939-4545-839e-42016f9786a5",
+      "comment": "",
+      "command": "verify",
+      "target": "isCorrect",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "7a5010c2-8d09-4557-b1c3-58e9b29f7a86",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "19e49c25-3785-4ac4-9c31-b0a2004b6797",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.anphatpc.com.vn/"],
+  "plugins": []
+}
