@@ -1,7 +1,7 @@
 {
-  "id": "4e541fdc-0901-480d-8b92-68e037b608cc",
+  "id": "8f5c4f6d-5dd4-4c66-9b3c-merged-anphat-side",
   "version": "2.0",
-  "name": "anphat-TC",
+  "name": "finalterm",
   "url": "https://www.anphatpc.com.vn/",
   "tests": [{
     "id": "f783d575-c4b4-4ad4-8197-ccee707db49e",
@@ -806,6 +806,78 @@
       "value": ""
     }]
   }, {
+    "id": "800414c2-6dc7-4a96-8e74-b1a233bc4da9",
+    "name": "tc05-Verify Product Removal from Cart",
+    "commands": [{
+      "id": "7992a502-ece7-473a-bd41-f92a6d88025e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3018e8bd-040b-4b8b-86b7-3a24d491dd6d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d798123-0b41-4444-a103-7da64b49e128",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fa9633f-a2b4-4672-97e5-8c237c48c674",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-cart-count",
+      "targets": [
+        ["css=.js-cart-count", "css:finder"],
+        ["xpath=//a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2c4b23e-5f77-4da0-8f12-85f14d5d3309",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d-inline-block",
+      "targets": [
+        ["css=.d-inline-block", "css:finder"],
+        ["xpath=//a[contains(text(),'Xóa giỏ hàng')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"$('.delete-from-cart').click();\"]", "xpath:attributes"],
+        ["xpath=//form[@id='formCart']/div[4]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[5]", "xpath:href"],
+        ["xpath=//form/div[4]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aa0fc47-8638-4d88-9e3b-d8f3c9986d05",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ed4b52f-bec6-41f9-a701-d83b96da0847",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.font-weight-bold",
+      "targets": [
+        ["css=.font-weight-bold", "css:finder"],
+        ["xpath=//div[5]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Có 0 sản phẩm trong giỏ hàng')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
     "id": "df9d2ef1-182e-4a6a-8e70-60ffa894bc76",
     "name": "tc06-Verify Product Sorting (Price: High to Low)",
     "commands": [{
@@ -966,24 +1038,24 @@
       "value": ""
     }]
   }, {
-    "id": "800414c2-6dc7-4a96-8e74-b1a233bc4da9",
-    "name": "tc05-Verify Product Removal from Cart",
+    "id": "e80fec29-3f9e-45a6-9581-befed6587cb2",
+    "name": "tc07-Verify Product Quantity Added to Shopping Cart",
     "commands": [{
-      "id": "7992a502-ece7-473a-bd41-f92a6d88025e",
+      "id": "7438b8c7-9df3-430d-9f0d-438c3a0b183d",
       "comment": "",
       "command": "open",
       "target": "https://www.anphatpc.com.vn/",
       "targets": [],
       "value": ""
     }, {
-      "id": "3018e8bd-040b-4b8b-86b7-3a24d491dd6d",
+      "id": "2d964dd6-8eef-4476-be59-d313e1c4fb22",
       "comment": "",
       "command": "setWindowSize",
       "target": "1920x1080",
       "targets": [],
       "value": ""
     }, {
-      "id": "7d798123-0b41-4444-a103-7da64b49e128",
+      "id": "eeeedada-a35c-4b55-ae09-6f04e33a25ac",
       "comment": "",
       "command": "click",
       "target": "css=.far",
@@ -995,46 +1067,217 @@
       ],
       "value": ""
     }, {
-      "id": "5fa9633f-a2b4-4672-97e5-8c237c48c674",
+      "id": "b085781c-0262-4959-9c29-48d68a1a627f",
       "comment": "",
       "command": "click",
-      "target": "css=.js-cart-count",
+      "target": "css=.icon-cart",
       "targets": [
-        ["css=.js-cart-count", "css:finder"],
-        ["xpath=//a/span", "xpath:position"]
+        ["css=.icon-cart", "css:finder"],
+        ["xpath=//div[4]/a/i", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "a2c4b23e-5f77-4da0-8f12-85f14d5d3309",
+      "id": "c4377542-533d-49ac-88b0-21394a0b0e36",
       "comment": "",
-      "command": "click",
-      "target": "css=.d-inline-block",
-      "targets": [
-        ["css=.d-inline-block", "css:finder"],
-        ["xpath=//a[contains(text(),'Xóa giỏ hàng')]", "xpath:link"],
-        ["xpath=//a[@onclick=\"$('.delete-from-cart').click();\"]", "xpath:attributes"],
-        ["xpath=//form[@id='formCart']/div[4]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[5]", "xpath:href"],
-        ["xpath=//form/div[4]/div/a", "xpath:position"]
-      ],
-      "value": ""
+      "command": "storeXpathCount",
+      "target": "//tr[@class='js-item-row' and @data-item_type='product']",
+      "targets": [],
+      "value": "cartItem"
     }, {
-      "id": "6aa0fc47-8638-4d88-9e3b-d8f3c9986d05",
+      "id": "2eaa455d-c196-40ae-beea-8121962a5a43",
       "comment": "",
-      "command": "pause",
-      "target": "5000",
+      "command": "echo",
+      "target": "Cart items: ${cartItem}",
       "targets": [],
       "value": ""
     }, {
-      "id": "4ed4b52f-bec6-41f9-a701-d83b96da0847",
+      "id": "e5dbb00a-a12c-48b4-8a23-9218e68bee78",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.querySelectorAll(\"input.buy-quantity\")).reduce((sum,e)=>sum+Number(e.value),0)",
+      "targets": [],
+      "value": "totalQty"
+    }, {
+      "id": "bb35b886-bb38-44df-afeb-979dbceaa466",
+      "comment": "",
+      "command": "echo",
+      "target": "Total Quantity: ${totalQty}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b6059f7-59cd-4ce7-9da5-d02e2c00d694",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.js-cart-count",
+      "targets": [],
+      "value": "cartIconQty"
+    }, {
+      "id": "e1661a8b-dd76-4982-8e07-1e9abf7870d1",
+      "comment": "",
+      "command": "echo",
+      "target": "Cart Icon Quantity: ${cartIconQty}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7ce760a-e139-4b96-9046-258e4e9d83b9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.js-cart-count",
+      "targets": [],
+      "value": "${totalQty}"
+    }, {
+      "id": "c927dcb0-3c37-4016-b721-96da8b3306e5",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalQty}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "aa7f8a8f-1f4f-4864-a375-e861f210de61",
+    "name": "tc08-Verify Product Comparison Functionality",
+    "commands": [{
+      "id": "9e919429-336c-4116-86a1-bca5a3f70cf4",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51f30da3-5f56-476c-ab1e-a60a7dd0b302",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04c73e76-59ae-4c9b-96bc-9a812b9b58b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df857266-0113-4afa-a4bb-43d139495e6d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Apple",
+      "targets": [
+        ["linkText=Apple", "linkText"],
+        ["css=.item:nth-child(7) > .pro-cate-1", "css:finder"],
+        ["xpath=//a[contains(@href, '/apple_dm1064.html-1')]", "xpath:href"],
+        ["xpath=//header/div[3]/div/div/div[3]/div/div/div[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "293e6065-1be1-4ce6-99fb-73b027c446bf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Apple",
+      "targets": [
+        ["linkText=Apple", "linkText"],
+        ["css=.item:nth-child(7) > .pro-cate-1", "css:finder"],
+        ["xpath=//a[contains(@href, '/apple_dm1064.html-1')]", "xpath:href"],
+        ["xpath=//header/div[3]/div/div/div[3]/div/div/div[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad0a7837-3c5d-4796-aaef-ca8d02fea3b0",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "377fcb57-1ca0-40fc-9010-083daced6bde",
+      "comment": "",
+      "command": "click",
+      "target": " xpath=(//a[contains(@class,'js-p-compare')])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e799572-a386-4b03-a9a2-85c1528d63a2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(@class,'js-p-compare')])[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2de44eab-f201-43ed-aa50-7d5efaa98c56",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//a[contains(@class,'compare-name')])[1]",
+      "targets": [],
+      "value": "popupProduct1"
+    }, {
+      "id": "3e76e216-8c6b-4af3-80e2-e3f72a12eb95",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//a[contains(@class,'compare-name')])[2]",
+      "targets": [],
+      "value": "popupProduct2"
+    }, {
+      "id": "7f4ec960-1aa6-458e-8294-1925e72c7f91",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=SO SÁNH NGAY",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da066702-03da-40a3-960b-1c61f62c0d42",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c677471-8e31-4b45-a795-eff61a67cab9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=compare-table",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91b62934-36fc-4ce1-9ef8-a3f609d3368a",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "css=.font-weight-bold",
-      "targets": [
-        ["css=.font-weight-bold", "css:finder"],
-        ["xpath=//div[5]/div/p", "xpath:position"],
-        ["xpath=//p[contains(.,'Có 0 sản phẩm trong giỏ hàng')]", "xpath:innerText"]
-      ],
+      "target": "xpath=//table[@id='compare-table']//tr",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8854380-05d6-4689-91bc-3536e1aab572",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//table[@id='compare-table']//a)[1]",
+      "targets": [],
+      "value": "tableProduct1"
+    }, {
+      "id": "07e9fca3-4564-47ae-8896-2b33c7985b6c",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//table[@id='compare-table']//a)[2]",
+      "targets": [],
+      "value": "tableProduct2"
+    }, {
+      "id": "15b899fe-a069-4b71-b458-b8bbe6581492",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//table[@id='compare-table']//a[text()='${popupProduct1}']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca57fa68-da75-4277-866f-d62564e4ffa8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//table[@id='compare-table']//a[text()='${popupProduct2}']",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -1154,14 +1397,102 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "41896892-5a56-44a1-b898-9ad61d7e5e68",
+    "name": "tc10-Verify Video ",
+    "commands": [{
+      "id": "45fb5711-aaa2-44bb-b5b2-1db929532555",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d3d8aa4-5b19-48f5-a908-378c1497bec8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbfccabb-9c91-4320-b507-8c7ee6c90342",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ecc8499-5d80-4363-a8e8-d68b5117732e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Video",
+      "targets": [
+        ["linkText=Video", "linkText"],
+        ["css=.icon-video", "css:finder"],
+        ["xpath=//a[contains(text(),'Video')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.youtube.com/c/AnPhatComputerpc')]", "xpath:href"],
+        ["xpath=//div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Video')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7483ce1-e1d8-4a69-a26f-008e6dd327c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=end",
+      "targets": [
+        ["id=end", "id"],
+        ["css=#end", "css:finder"],
+        ["xpath=//div[@id='end']", "xpath:attributes"],
+        ["xpath=//div[@id='container']/div[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ce5e664-08df-4a3c-9d5f-bccc9975828d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.dynamicTextViewModelH1 > .yt-core-attributed-string",
+      "targets": [
+        ["css=.dynamicTextViewModelH1 > .yt-core-attributed-string", "css:finder"],
+        ["xpath=//div[@id='page-header']/yt-page-header-renderer/yt-page-header-view-model/div/div/div/yt-dynamic-text-view-model/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'An Phát Computer')]", "xpath:innerText"]
+      ],
+      "value": "An Phát Computer"
+    }, {
+      "id": "b6d41051-2a7c-4d07-aeae-e68e40fb5080",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.yt-truncated-text__truncated-text-content:nth-child(1) > .yt-core-attributed-string",
+      "targets": [
+        ["css=.yt-truncated-text__truncated-text-content:nth-child(1) > .yt-core-attributed-string", "css:finder"],
+        ["xpath=//div[@id='page-header']/yt-page-header-renderer/yt-page-header-view-model/div/div/div/yt-description-preview-view-model/truncated-text/truncated-text-content/span", "xpath:idRelative"],
+        ["xpath=//truncated-text-content/span", "xpath:position"],
+        ["xpath=//span[contains(.,'🎬 Chào mừng đến với kênh YouTube chính thức của An Phát Computer! ')]", "xpath:innerText"]
+      ],
+      "value": "🎬 Chào mừng đến với kênh YouTube chính thức của An Phát Computer! "
+    }, {
+      "id": "89ec4f9b-5a38-442b-bc7f-c3672be28262",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
-    "id": "19e49c25-3785-4ac4-9c31-b0a2004b6797",
-    "name": "Default Suite",
+    "id": "aa0ce8de-merged-suite-4ac4-9c31-b0a2004b6797",
+    "name": "Merged Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["f783d575-c4b4-4ad4-8197-ccee707db49e", "a030ca11-8935-428f-bbf8-9fa0230cfb52", "076e367c-21a5-4b56-9f34-2759e689db6a", "1dd9164e-309d-4ba1-b016-28d2b13b7225", "3ae59dbf-5a2b-47be-a849-0b1ca0b3a9c4", "800414c2-6dc7-4a96-8e74-b1a233bc4da9", "df9d2ef1-182e-4a6a-8e70-60ffa894bc76", "e80fec29-3f9e-45a6-9581-befed6587cb2", "aa7f8a8f-1f4f-4864-a375-e861f210de61", "24a19817-378e-4cc5-9e27-5a21079cbf53", "41896892-5a56-44a1-b898-9ad61d7e5e68"]
   }],
   "urls": ["https://www.anphatpc.com.vn/", "https://omayo.blogspot.com/"],
   "plugins": []
