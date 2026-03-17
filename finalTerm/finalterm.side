@@ -876,6 +876,13 @@
         ["xpath=//p[contains(.,'Có 0 sản phẩm trong giỏ hàng')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "623b067c-e730-40fc-adf5-942fcdc8b37f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "df9d2ef1-182e-4a6a-8e70-60ffa894bc76",
@@ -952,13 +959,6 @@
       "target": "xpath=(//div[contains(@id, 'js-product-list-container')]//div[contains(@class, 'p-item')])",
       "targets": [],
       "value": "totalProduct"
-    }, {
-      "id": "06cacfbf-c9df-417a-ac85-5d203cdd87d8",
-      "comment": "",
-      "command": "echo",
-      "target": "${totalProduct}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "f780a351-8c8e-4cb9-96a9-4a339e105d5c",
       "comment": "",
@@ -1067,6 +1067,80 @@
       ],
       "value": ""
     }, {
+      "id": "7b170cbe-2b40-43ef-b86d-78fe4885fcd0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item:nth-child(7) .title",
+      "targets": [
+        ["css=.item:nth-child(7) .title", "css:finder"],
+        ["xpath=//div[7]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "194ffa91-8e9b-458a-a824-d103a0ca1865",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class,'p-item')]",
+      "targets": [],
+      "value": "totalProduct"
+    }, {
+      "id": "d0057077-e8ca-4a70-bc73-fda1c40df4a3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "4afd38df-62f1-4da5-bd7f-e3fd9dbebdfc",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalProduct} && ${i} <= 5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05a46c1d-11a0-4e84-9aab-3275ef2db5fd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[@id='js-product-list-container']//div[contains(@class, 'p-item')])[${i}]//a[@class='p-name']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49fa2584-57b3-4281-b8ce-63c544f181ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.head.appendChild(document.createElement('script')).text = \"window.alert=()=>!0\";",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2f64d0c-2ca5-4a05-8d56-3cb65af389fc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(@class, 'btn-addCart')])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b65c67a6-a8f8-4515-aa23-abd6bf18681c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2df10b0c-e0ae-4465-b98c-e467f56f8c49",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "dbfdfdfe-0e94-489d-8b25-5aa240396e62",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "b085781c-0262-4959-9c29-48d68a1a627f",
       "comment": "",
       "command": "click",
@@ -1094,7 +1168,7 @@
       "id": "e5dbb00a-a12c-48b4-8a23-9218e68bee78",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from(document.querySelectorAll(\"input.buy-quantity\")).reduce((sum,e)=>sum+Number(e.value),0)",
+      "target": "return [...document.querySelectorAll(\".buy-quantity\")].reduce((s, e) => s + +e.value, 0)",
       "targets": [],
       "value": "totalQty"
     }, {
@@ -1126,10 +1200,10 @@
       "targets": [],
       "value": "${totalQty}"
     }, {
-      "id": "c927dcb0-3c37-4016-b721-96da8b3306e5",
+      "id": "f620fa0a-d0cd-484a-9bec-4dbb06c04c9b",
       "comment": "",
-      "command": "echo",
-      "target": "${totalQty}",
+      "command": "close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -1163,19 +1237,6 @@
       ],
       "value": ""
     }, {
-      "id": "df857266-0113-4afa-a4bb-43d139495e6d",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Apple",
-      "targets": [
-        ["linkText=Apple", "linkText"],
-        ["css=.item:nth-child(7) > .pro-cate-1", "css:finder"],
-        ["xpath=//a[contains(@href, '/apple_dm1064.html-1')]", "xpath:href"],
-        ["xpath=//header/div[3]/div/div/div[3]/div/div/div[7]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Apple')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "293e6065-1be1-4ce6-99fb-73b027c446bf",
       "comment": "",
       "command": "click",
@@ -1196,33 +1257,68 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "377fcb57-1ca0-40fc-9010-083daced6bde",
+      "id": "fd641ef5-6c93-4a8a-9590-37e404a57ccc",
       "comment": "",
-      "command": "click",
-      "target": " xpath=(//a[contains(@class,'js-p-compare')])[1]",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "2645ff48-9254-4c88-9fef-60d05136d5aa",
+      "comment": "",
+      "command": "while",
+      "target": "${i} < 2",
       "targets": [],
       "value": ""
     }, {
-      "id": "3e799572-a386-4b03-a9a2-85c1528d63a2",
+      "id": "dada140a-b892-4a68-b954-cfdf63106227",
       "comment": "",
       "command": "click",
-      "target": "xpath=(//a[contains(@class,'js-p-compare')])[2]",
+      "target": " xpath=(//a[contains(@class,'js-p-compare')])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77b1b41e-d710-4185-a979-15f8e92c71e4",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//a[contains(@class,'compare-name')])[${i}]",
+      "targets": [],
+      "value": "popupProduct1"
+    }, {
+      "id": "dc021253-dac4-4d3e-be4a-06805342b0e9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "nextIndex"
+    }, {
+      "id": "377fcb57-1ca0-40fc-9010-083daced6bde",
+      "comment": "",
+      "command": "click",
+      "target": " xpath=(//a[contains(@class,'js-p-compare')])[${nextIndex}]",
       "targets": [],
       "value": ""
     }, {
       "id": "2de44eab-f201-43ed-aa50-7d5efaa98c56",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=(//a[contains(@class,'compare-name')])[1]",
-      "targets": [],
-      "value": "popupProduct1"
-    }, {
-      "id": "3e76e216-8c6b-4af3-80e2-e3f72a12eb95",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=(//a[contains(@class,'compare-name')])[2]",
+      "target": "xpath=(//a[contains(@class,'compare-name')])[${nextIndex}]",
       "targets": [],
       "value": "popupProduct2"
+    }, {
+      "id": "b79b0227-7319-4a7e-8bb5-ec8e96436e01",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "d9251c90-9d8f-491e-b979-f924cf68bfa1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "7f4ec960-1aa6-458e-8294-1925e72c7f91",
       "comment": "",
@@ -1277,6 +1373,51 @@
       "comment": "",
       "command": "verifyElementPresent",
       "target": "xpath=//table[@id='compare-table']//a[text()='${popupProduct2}']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b3416bd-8129-487f-86de-ab9abc078d9a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61d7e94b-e220-486d-bb65-0338123be5f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=So sánh (2)",
+      "targets": [
+        ["linkText=So sánh (2)", "linkText"],
+        ["css=.popup-compare-button", "css:finder"],
+        ["xpath=//a[@onclick=\"$('#js-global-compare').addClass('active')\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[74]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'So sánh (2)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1fef94b-b6b1-4599-8ffb-2229196bd6c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=js-close-compare",
+      "targets": [
+        ["id=js-close-compare", "id"],
+        ["linkText=Xoá tất cả sản phẩm", "linkText"],
+        ["css=#js-close-compare", "css:finder"],
+        ["xpath=//a[contains(text(),'Xoá tất cả sản phẩm')]", "xpath:link"],
+        ["xpath=//a[@id='js-close-compare']", "xpath:attributes"],
+        ["xpath=//div[@id='js-global-compare']/div[2]/div[3]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[230]", "xpath:href"],
+        ["xpath=//div[11]/div[2]/div[3]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Xoá tất cả sản phẩm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "494a26fd-0f92-4858-8c11-4378c6a161ad",
+      "comment": "",
+      "command": "close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
