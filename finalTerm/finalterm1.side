@@ -1334,66 +1334,31 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "fd641ef5-6c93-4a8a-9590-37e404a57ccc",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "2645ff48-9254-4c88-9fef-60d05136d5aa",
-      "comment": "",
-      "command": "while",
-      "target": "${i} < 2",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "dada140a-b892-4a68-b954-cfdf63106227",
       "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//a[contains(@class,'p-name')])[1]",
+      "targets": [],
+      "value": "rawProductName1"
+    }, {
+      "id": "ee6137c6-5a1b-4313-a3ec-75254ac2e270",
+      "comment": "",
       "command": "click",
-      "target": " xpath=(//a[contains(@class,'js-p-compare')])[${i}]",
+      "target": " xpath=(//a[contains(@class,'js-p-compare')])[1]",
       "targets": [],
       "value": ""
-    }, {
-      "id": "77b1b41e-d710-4185-a979-15f8e92c71e4",
-      "comment": "",
-      "command": "storeText",
-      "target": "xpath=(//a[contains(@class,'compare-name')])[${i}]",
-      "targets": [],
-      "value": "popupProduct1"
-    }, {
-      "id": "dc021253-dac4-4d3e-be4a-06805342b0e9",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "nextIndex"
     }, {
       "id": "377fcb57-1ca0-40fc-9010-083daced6bde",
       "comment": "",
-      "command": "click",
-      "target": " xpath=(//a[contains(@class,'js-p-compare')])[${nextIndex}]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2de44eab-f201-43ed-aa50-7d5efaa98c56",
-      "comment": "",
       "command": "storeText",
-      "target": "xpath=(//a[contains(@class,'compare-name')])[${nextIndex}]",
+      "target": "xpath=(//a[contains(@class,'p-name')])[2]",
       "targets": [],
-      "value": "popupProduct2"
+      "value": "rawProductName2"
     }, {
-      "id": "b79b0227-7319-4a7e-8bb5-ec8e96436e01",
+      "id": "8f42c069-0425-481b-93b5-0e69d2e2efb2",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ${i} + 1",
-      "targets": [],
-      "value": "i"
-    }, {
-      "id": "d9251c90-9d8f-491e-b979-f924cf68bfa1",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "command": "click",
+      "target": " xpath=(//a[contains(@class,'js-p-compare')])[2]",
       "targets": [],
       "value": ""
     }, {
@@ -1428,30 +1393,114 @@
       "id": "e8854380-05d6-4689-91bc-3536e1aab572",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=(//table[@id='compare-table']//a)[1]",
+      "target": "xpath=//table[@id='compare-table']//td[2]//a[1]",
       "targets": [],
       "value": "tableProduct1"
     }, {
       "id": "07e9fca3-4564-47ae-8896-2b33c7985b6c",
       "comment": "",
       "command": "storeText",
-      "target": "xpath=(//table[@id='compare-table']//a)[2]",
+      "target": "xpath=//table[@id='compare-table']//td[3]//a[1]",
       "targets": [],
       "value": "tableProduct2"
     }, {
-      "id": "15b899fe-a069-4b71-b458-b8bbe6581492",
+      "id": "dc9f4669-1900-4770-8290-2e5875a5c320",
       "comment": "",
-      "command": "verifyElementPresent",
-      "target": "xpath=//table[@id='compare-table']//a[text()='${popupProduct1}']",
+      "command": "echo",
+      "target": "${tableProduct1}",
       "targets": [],
       "value": ""
     }, {
-      "id": "ca57fa68-da75-4277-866f-d62564e4ffa8",
+      "id": "1d3afa7d-8cda-4465-9f93-dfb3065ea8d9",
       "comment": "",
-      "command": "verifyElementPresent",
-      "target": "xpath=//table[@id='compare-table']//a[text()='${popupProduct2}']",
+      "command": "echo",
+      "target": "${tableProduct2}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "50db85b7-73be-43ad-8cca-d8f4b2f9f209",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${rawProductName1}.trim().toUpperCase().split(/\\s+/).slice(0,2).join(' ')",
+      "targets": [],
+      "value": "key1"
+    }, {
+      "id": "0ab6d97a-f14f-451d-b57f-8a2654e30bd0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${rawProductName2}.trim().toUpperCase().split(/\\s+/).slice(0,2).join(' ')",
+      "targets": [],
+      "value": "key2"
+    }, {
+      "id": "81fd85ac-d7ac-4e90-a7f7-4fdc4a36aaf1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tableProduct1}.trim().toUpperCase().split(/\\s+/).slice(0,2).join(' ')",
+      "targets": [],
+      "value": "tableKey1"
+    }, {
+      "id": "7f3bb9b7-2aca-4f84-adb5-9f994d691bc3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tableProduct2}.trim().toUpperCase().split(/\\s+/).slice(0,2).join(' ')",
+      "targets": [],
+      "value": "tableKey2"
+    }, {
+      "id": "0835f8f5-153d-4b56-80eb-ec153506b54e",
+      "comment": "",
+      "command": "echo",
+      "target": "key1=${key1} | key2=${key2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be78d952-60cc-4454-8fac-c0896f9ec7cf",
+      "comment": "",
+      "command": "echo",
+      "target": "tableKey1=${tableKey1} | tableKey2=${tableKey2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91006d60-d463-43d8-ba91-3a92544ca410",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tableKey1}===${key1} || ${tableKey1}===${key2}",
+      "targets": [],
+      "value": "isTableProduct1Matched"
+    }, {
+      "id": "61474c4f-5215-4116-b473-36b6c8aa78eb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${tableKey2}===${key1} || ${tableKey2}===${key2}",
+      "targets": [],
+      "value": "isTableProduct2Matched"
+    }, {
+      "id": "6e8d647e-76c6-4a6f-b31f-82dd4a26a213",
+      "comment": "",
+      "command": "assert",
+      "target": "isTableProduct1Matched",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "4ce8dc01-77f4-45a3-94d6-57f3539e610d",
+      "comment": "",
+      "command": "assert",
+      "target": "isTableProduct2Matched",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "e2e6e97a-8f17-4a4d-9ad3-8b6b9e9c0f51",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ((${tableProduct1}.toUpperCase().match(/[A-Z0-9]+\\/[A-Z0-9]+/)||[''])[0]) !== ((${tableProduct2}.toUpperCase().match(/[A-Z0-9]+\\/[A-Z0-9]+/)||[''])[0])",
+      "targets": [],
+      "value": "isCompareNameDifferent"
+    }, {
+      "id": "4f34f1a6-ffdf-46d8-a3f6-a6f4a6210f12",
+      "comment": "",
+      "command": "assert",
+      "target": "isCompareNameDifferent",
+      "targets": [],
+      "value": "true"
     }, {
       "id": "0b3416bd-8129-487f-86de-ab9abc078d9a",
       "comment": "",
@@ -1493,7 +1542,7 @@
     }, {
       "id": "494a26fd-0f92-4858-8c11-4378c6a161ad",
       "comment": "",
-      "command": "//close",
+      "command": "close",
       "target": "",
       "targets": [],
       "value": ""
