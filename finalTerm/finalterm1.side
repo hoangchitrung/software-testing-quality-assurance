@@ -1547,6 +1547,988 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "142496ad-99c1-4f5e-bfbf-6ab51c5773b9",
+    "name": "tc10-Verify Custom PC Build Total Price Calculation",
+    "commands": [{
+      "id": "1c74d005-bd2a-4a04-b6dc-672e947943c8",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4db7787-1b66-4ba7-981e-f1bfabebf1ad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f9da05b-b660-404a-9767-c78b76ee34ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "091141b0-3c64-4791-9104-5e614136519e",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .text-12",
+      "targets": [
+        ["css=a > .text-12", "css:finder"],
+        ["xpath=//div[2]/a/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bda64e2-a263-4183-906c-535fa19e20c7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='js-buildpc-layout']/div/div/span",
+      "targets": [
+        ["id=js-category-info-1025", "id"],
+        ["css=#js-category-info-1025", "css:finder"],
+        ["xpath=//span[@id='js-category-info-1025']", "xpath:attributes"],
+        ["xpath=//div[@id='js-buildpc-layout']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' Chọn Bộ vi xử lý')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05425803-81aa-4c29-9697-7e73889ce9c0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@onclick='showBuildId(1);changeTab(this);']",
+      "targets": [
+        ["css=.active > span", "css:finder"],
+        ["xpath=//span[@onclick='showBuildId(1);changeTab(this);']", "xpath:attributes"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07ff7f5c-b002-478e-9af1-54a61a8cbcb8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "e2b298f0-114c-4cc2-9acc-886270e3cd4e",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=(//div[contains(@class, 'list-drive')]//div[contains(@class, 'item-drive')])",
+      "targets": [],
+      "value": "totalComponents"
+    }, {
+      "id": "b2e92b37-9bc8-47d8-835d-708b2399edb8",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalComponents}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb123873-7174-4ab1-998c-1f28e4488943",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[contains(@class, 'open-selection')])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aa6e55a-0fdd-443b-a646-15882bd178a2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[contains(@class, 'js-select-product')])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "956fa483-fc4f-47e5-a4d4-f751b7916c74",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "4576bccb-a0b3-4ea6-a423-565ba53687cf",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e24db9e-b2bb-460c-85f2-51b200d04e89",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "j"
+    }, {
+      "id": "338cc3e1-0bec-46a7-a642-45ccd42731f9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "totalSumPrice"
+    }, {
+      "id": "6de4c8ab-e297-41da-b5be-4d83b1326123",
+      "comment": "",
+      "command": "while",
+      "target": "${j} <= ${totalComponents}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0837b1b-6875-40e5-ae96-72fc96d0471f",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//span[contains(@class, 'sum_price')])[${j}]",
+      "targets": [],
+      "value": "sumPrice"
+    }, {
+      "id": "4e217315-c657-4c35-9485-dbc4d5127760",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${sumPrice}.replace(/[^\\d]/g, ''))",
+      "targets": [],
+      "value": "cleanSumPrice"
+    }, {
+      "id": "7161a304-e103-4c7e-9bd6-f95054ce42f0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${cleanSumPrice}) + Number(${totalSumPrice})",
+      "targets": [],
+      "value": "totalSumPrice"
+    }, {
+      "id": "188cc41b-a14f-4685-81be-3d9c69da302f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${j} + 1",
+      "targets": [],
+      "value": "j"
+    }, {
+      "id": "14acf3a8-0f74-489c-ad59-7a4c5788ff92",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63eb9a88-1a3a-44f1-ada2-5e4a3ced95a7",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//span[contains(@class, 'total-price-config')]",
+      "targets": [],
+      "value": "webTotalPrice"
+    }, {
+      "id": "116e204b-0806-47cb-933a-c1f9a2610d30",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${webTotalPrice}.replace(/[^\\d]/g, ''))",
+      "targets": [],
+      "value": "cleanWebSumPrice"
+    }, {
+      "id": "53e2b0b0-69e5-47d0-932b-55c348968978",
+      "comment": "",
+      "command": "echo",
+      "target": "${cleanWebSumPrice} ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a8f2381-bb50-45ce-9f84-fe1186fd8a68",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalSumPrice} ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d4369c2-b083-4616-b69f-3f35fb8f4390",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${cleanWebSumPrice} === ${totalSumPrice}",
+      "targets": [],
+      "value": "isMatch"
+    }, {
+      "id": "fbde0a71-2b71-4fc0-955b-71442ea65a9b",
+      "comment": "",
+      "command": "verify",
+      "target": "isMatch",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "fcc8f1b9-8c21-4f8a-bc5b-9a6f10d25d75",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-btn-action:nth-child(2) span",
+      "targets": [
+        ["css=.list-btn-action:nth-child(2) span", "css:finder"],
+        ["xpath=//span[@onclick='openPopupRebuild()']", "xpath:attributes"],
+        ["xpath=//ul[2]/li/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe5cb0fa-fe9c-4dcd-8bf2-4d1a15eabb70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(6)",
+      "targets": [
+        ["css=.btn:nth-child(6)", "css:finder"],
+        ["xpath=//button[@onclick='reBuild();']", "xpath:attributes"],
+        ["xpath=//div[@id='popup-rebuild_config']/button[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'XÁC NHẬN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "27aefb8c-d663-41e0-a433-51b68e7c9f9c",
+    "name": "tc12-Verify Recently Viewed Products History",
+    "commands": [{
+      "id": "f7f9da14-92fd-4708-84e0-c5540c047329",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e07aa02f-0a56-4c82-98f7-bb198b842bf7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a2752d8-8e97-45aa-83cf-f020f18d1987",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df682a5a-b750-4ff7-af86-22249560b92e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Apple')]",
+      "targets": [
+        ["css=.item:nth-child(7) .title", "css:finder"],
+        ["xpath=//div[7]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dade2057-2be5-4597-be9b-ad04b25e9b77",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class,'p-item')]",
+      "targets": [],
+      "value": "totalProduct"
+    }, {
+      "id": "b0754d20-3bf9-436a-8848-65a28d24815c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "552403e7-0835-4c91-b065-7917cff58a20",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalProduct}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52e9d6e6-28bf-4b73-8eb6-db3889996e9e",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//div[contains(@class, 'p-item')]//div/a/h3)[${i}]",
+      "targets": [],
+      "value": "preClickProductName"
+    }, {
+      "id": "73a9b247-b582-48b3-b3b2-8f2979686f03",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23f50e69-fae2-4150-b265-84303530fd96",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//div[contains(@class, 'p-item')]//div/a[contains(@class, 'p-name')])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57bc6173-754f-4c87-bc52-2d971bb1de43",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f00150a-3dae-414b-b880-c935b0da3743",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/san-pham-da-xem",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a5f2594-aa16-468e-b8d4-eaac9d4781d8",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//div[contains(@class, 'p-text')]//a[@class='p-name']/h3)[1]",
+      "targets": [],
+      "value": "afterClickProductName"
+    }, {
+      "id": "48c1b813-dea6-48bd-ab80-c49fdc913205",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${preClickProductName} === ${afterClickProductName}",
+      "targets": [],
+      "value": "isMatch"
+    }, {
+      "id": "48934fe2-57b8-4f69-828a-2f89ac8e6aed",
+      "comment": "",
+      "command": "verify",
+      "target": "isMatch",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d3a34c8d-4769-440d-9496-df3c3d8d5728",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=DANH MỤC SẢN PHẨM",
+      "targets": [
+        ["linkText=DANH MỤC SẢN PHẨM", "linkText"],
+        ["css=.menu-title", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[3]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' DANH MỤC SẢN PHẨM')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb317d69-7d29-4a1d-90f3-20e89bbbd7aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo-img",
+      "targets": [
+        ["css=.logo-img", "css:finder"],
+        ["xpath=//img[@alt='An Phát logo']", "xpath:img"],
+        ["xpath=//div[3]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96d2d0e7-de12-4341-9885-44d1b43b6e7f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ca2b652-7ba1-4ba4-8df2-06c31eab1bbd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item:nth-child(7) .title",
+      "targets": [
+        ["css=.item:nth-child(7) .title", "css:finder"],
+        ["xpath=//div[7]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc046671-5cdd-4429-9509-0738c29ca04a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "abd6b477-47e1-47d0-a8e4-110f5258fda6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee7ad31c-2b34-4b25-9580-bcd83f76c155",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dcbfb5e3-6432-407f-996b-641e3bfe61c3",
+    "name": "tc14-Verify Search Autocomplete Relevance",
+    "commands": [{
+      "id": "400e2fa6-3ed6-402d-940f-a925b1f194e5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b84b21f0-bf89-4b00-89d3-0c85476c0d65",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62ba4b7c-f1f5-4f92-91da-3ff13c8996fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e04ad20c-3091-448e-8be3-55143ca096da",
+      "comment": "",
+      "command": "click",
+      "target": "id=js-search",
+      "targets": [
+        ["id=js-search", "id"],
+        ["name=q", "name"],
+        ["css=#js-search", "css:finder"],
+        ["xpath=//input[@id='js-search']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "533f408b-3910-4dd3-a750-3f03dce40aa9",
+      "comment": "",
+      "command": "type",
+      "target": "id=js-search",
+      "targets": [
+        ["id=js-search", "id"],
+        ["name=q", "name"],
+        ["css=#js-search", "css:finder"],
+        ["xpath=//input[@id='js-search']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "macbook"
+    }, {
+      "id": "2b7a383f-7934-433a-9241-46b6281786a3",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58ca6cfb-8b0b-4bb6-ae2a-ca660cc29807",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=(//div[contains(@class, 'autocomplete-suggestion')]//div[contains(@class, 'list')])",
+      "targets": [],
+      "value": "totalSuggest"
+    }, {
+      "id": "04e01837-c0bc-443c-8d04-ac3636682a1b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${totalSuggest} > 0",
+      "targets": [],
+      "value": "hasResults"
+    }, {
+      "id": "09ab045e-4c9d-47e4-b1db-0ba663dda5c0",
+      "comment": "",
+      "command": "assert",
+      "target": "hasResults",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "84180f16-dc4e-41df-aba7-c61241abbf4d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "aac29be1-c579-48fc-949f-cf2e95dedd16",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalSuggest}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2120871-e0fb-40d7-aa7d-4c06df5fe57e",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//div[@class='autocomplete-suggestions']//div[@class='list']//span[@class='name'])[${i}]",
+      "targets": [],
+      "value": "itemName"
+    }, {
+      "id": "25a55761-2d23-4daf-91d6-aff9a47dc5f6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return String(${itemName}).toLowerCase().includes(\"macbook\")",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "33338686-5e73-4afc-8be6-1b7ecb37b0ab",
+      "comment": "",
+      "command": "verify",
+      "target": "check",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "70d6819f-14f0-4a1f-9a8d-b70f5571bdc3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${i}) + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "79be0e95-5479-40af-bb9f-96142f27cbd3",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7a87460-92c0-4f1e-a8bc-0c8389c264a1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bfd6c0fc-0201-4670-9885-dd1339d4cd71",
+    "name": "tc16-Verify Multi-Brand Filter Logic",
+    "commands": [{
+      "id": "32f63cc6-474e-4fc1-87be-10daba8de831",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37a02cbd-db0d-4749-8b84-e7b47731c4fc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1038",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c480a19e-de75-4e76-b5e1-fd0b280b7b72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2e09c3e-6769-46f2-b0f9-5aafb8ad4df8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item:nth-child(2) > .pro-cate-1 > .title",
+      "targets": [
+        ["css=.item:nth-child(2) > .pro-cate-1 > .title", "css:finder"],
+        ["xpath=//div[2]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Laptop - Máy Tính Xách Tay')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4d88629-10df-48d6-a20b-2155fa669011",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Hãng",
+      "targets": [
+        ["linkText=Hãng", "linkText"],
+        ["css=.filter-item:nth-child(2) > .filter-name", "css:finder"],
+        ["xpath=(//a[contains(text(),'Hãng')])[10]", "xpath:link"],
+        ["xpath=//div[@id='js-filter-container']/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[326]", "xpath:href"],
+        ["xpath=//section/div/div[5]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65b30a73-84be-48e7-9b91-7b1439bd0084",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='js-filter-container']/div/div[2]/div/div/a[4]/span",
+      "targets": [
+        ["css=.filter-group-middle > .image:nth-child(4) > .lazy", "css:finder"],
+        ["xpath=//div[@id='js-filter-container']/div/div[2]/div/div/a[4]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a[4]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56af7ef1-ae82-4af2-ac68-f263abf89855",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='js-filter-container']/div/div[2]/div/div/a[3]/span",
+      "targets": [
+        ["css=.filter-group-middle > .image:nth-child(3) > .lazy", "css:finder"],
+        ["xpath=//div[@id='js-filter-container']/div/div[2]/div/div/a[3]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db45b2c6-3c72-424d-b5ba-e70f27ae912b",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c69b520-a331-4580-8be9-6cd02656f916",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Xem 184 kết quả",
+      "targets": [
+        ["linkText=Xem 184 kết quả", "linkText"],
+        ["css=.current .js-open-url", "css:finder"],
+        ["xpath=//div[@id='js-filter-container']/div/div[2]/div/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/may-tinh-xach-tay-laptop.html?brand=5-4')])[2]", "xpath:href"],
+        ["xpath=//div[5]/div/div[2]/div/div[2]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12bff635-c7ed-4930-861e-0e2032b5d61c",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=(//div[contains(@class, 'p-list-container')]//div[contains(@class, 'p-item')])",
+      "targets": [],
+      "value": "totalProduct"
+    }, {
+      "id": "e3ba6410-f7e1-4a0a-b33d-68ec1082ea8b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return  1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "4b5f0125-b009-4078-b9e4-0f68c7700ff7",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalProduct}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f285fda-2b06-44d6-a6b8-927b1f0e5602",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//div[@id='js-product-holder']//div[contains(@class, 'p-item')]//a[@class='p-name']/h3)[${i}]",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "6630d282-ff3b-4211-bfea-69ca85f2eb54",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return String(${productName}).toLowerCase().includes(\"hp\") || String(${productName}).toLowerCase().includes(\"dell\");",
+      "targets": [],
+      "value": "isValid"
+    }, {
+      "id": "19b84e1b-a1d7-4f5c-aa22-018401cad738",
+      "comment": "",
+      "command": "verify",
+      "target": "isValid",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d0251fa0-16b6-4ed2-8d62-7033fbd5669a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(${i}) + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "01edac52-d1dc-465d-ae9c-7561dc5b0f0b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "614af5d1-85b0-4293-bf60-f3ebb0acdec6",
+    "name": "tc18-Verify Product Categorization Accuracy",
+    "commands": [{
+      "id": "9575e74b-8912-4ad1-ab0d-66d1e4d9a186",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e59b201-a3dc-406d-a65c-1e1dd41f87df",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1038",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9accc199-3b06-4990-ab92-28a26404bba8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d5e61b9-1bfb-4eaa-98ac-928f32d7ea88",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0, 1500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16c7ecff-69f2-4e85-8eb8-2a2957702985",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[@id='js-collection-850']//div[contains(@class, 'p-item')]",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "fe1a7ab4-dff9-4c1c-9a2f-20e09c9f9ce8",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2136e8dd-553c-4f9b-8a55-8ba2937b6827",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll(\".owl-item:not(.cloned) .p-item\").length",
+      "targets": [],
+      "value": "totalLaptop"
+    }, {
+      "id": "a3f14a3c-9de0-48d4-bfa6-2deb814c5d53",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "005768ab-182b-4283-8d10-cfb1b63ea222",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalLaptop}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d27d9c5-674b-47a5-aa18-03e4ba3b4201",
+      "comment": "",
+      "command": "//storeText",
+      "target": "xpath=(//div[@id='js-collection-850']//div[contains(@class,'owl-item') and not(contains(@class,'cloned'))]//h3)[${i}]",
+      "targets": [],
+      "value": "pName"
+    }, {
+      "id": "be50e65e-096d-43a2-ac28-57ed68e88613",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Number(document.querySelectorAll('#js-collection-850 .owl-item:not(.cloned) .p-price')[${i}-1].textContent.replace(/\\D/g,'')) > 5000000",
+      "targets": [],
+      "value": "isLaptop"
+    }, {
+      "id": "5939d96a-3a57-464e-9047-f4b3d0e21ab0",
+      "comment": "",
+      "command": "verify",
+      "target": "isLaptop",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "f1353588-1216-4d42-8d23-ad2f738e781d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "20b507bc-15b7-4c79-b12e-5b41c93cbc3f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "73d909a2-92fd-4c83-9e78-b216361877fa",
+    "name": "tc20-Verify Multi-Configuration Independence",
+    "commands": [{
+      "id": "c8c08000-f411-4626-b9d0-9650c0ba3de3",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.anphatpc.com.vn/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93a245f2-251c-47b1-bb9f-64dcfc209c65",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1038",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b5afb53-46bb-4986-bbc3-1580d0f4b6a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.far",
+      "targets": [
+        ["css=.far", "css:finder"],
+        ["xpath=//a[@onclick=\"$('.global-banner-popup-container').hide()\"]", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[13]", "xpath:href"],
+        ["xpath=//body/div[15]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f42c7c7b-f5d8-4034-ab17-6ccc3a4270c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .text-12",
+      "targets": [
+        ["css=a > .text-12", "css:finder"],
+        ["xpath=//div[2]/a/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bcb1f76-ba55-434a-92d8-20f225077446",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='js-buildpc-layout']/div/div/span",
+      "targets": [
+        ["id=js-category-info-1025", "id"],
+        ["css=#js-category-info-1025", "css:finder"],
+        ["xpath=//span[@id='js-category-info-1025']", "xpath:attributes"],
+        ["xpath=//div[@id='js-buildpc-layout']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' Chọn Bộ vi xử lý')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "614656b5-4373-4656-ab9e-67b9e6aa09d7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@onclick='showBuildId(1);changeTab(this);']",
+      "targets": [
+        ["css=.active > span", "css:finder"],
+        ["xpath=//span[@onclick='showBuildId(1);changeTab(this);']", "xpath:attributes"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e77140c0-fa0e-4950-b05c-9d0213da2bac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "bbf1666a-f974-4e1e-b3c1-c9d81c26f2ee",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=(//div[contains(@class, 'list-drive')]//div[contains(@class, 'item-drive')])",
+      "targets": [],
+      "value": "totalComponents"
+    }, {
+      "id": "092f1b83-53b9-430b-9bb7-3fa754533e81",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalComponents}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2db0980d-437a-48fa-9192-2fae3a510ce3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[contains(@class, 'open-selection')])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba95d1a2-d588-4f52-a228-90b0e35c486a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[contains(@class, 'js-select-product')])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7adce947-d27b-4544-9881-b76a38888fdf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "d19b1a4a-7035-4f96-a5dd-055f9e62c25f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fffa74cd-e320-42b2-b8c9-fb7d4f376b3c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@onclick='showBuildId(2);changeTab(this);']",
+      "targets": [
+        ["css=.list-btn-action-new > li:nth-child(2) > span", "css:finder"],
+        ["xpath=//span[@onclick='showBuildId(2);changeTab(this);']", "xpath:attributes"],
+        ["xpath=//li[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e517e028-8465-4c25-9968-288467bdb042",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "4f6ea92f-7bdc-4881-87fa-78db4dcb8388",
+      "comment": "",
+      "command": "while",
+      "target": "${i} <= ${totalComponents}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89bc3aa8-6cea-4ac9-ab29-067f66c3258d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=(//span[contains(@class, 'open-selection')])[${i}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c03c0cf-9484-4a49-916a-fa3a113016d0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "e31b16b4-2ad7-4611-bd25-fd0736496231",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "aa0ce8de-merged-suite-4ac4-9c31-b0a2004b6797",
